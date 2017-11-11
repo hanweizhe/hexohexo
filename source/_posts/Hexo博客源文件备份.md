@@ -6,11 +6,11 @@ tags:
 categories:
   - Hexo
 ---
-##### 前言
+#### 前言
 
 使用Hexo编写博客还是比较Nice的，但是有一个问题就是Hexo博客的源文件是放在本地的，如果换一台电脑更新博客或者源文件不小心丢失啦，那就麻烦啦。未雨绸缪，现在给出这一问题的解决方案。
 
-##### 备份方案
+#### 备份方案
 
 想到的办法：
 
@@ -22,7 +22,7 @@ categories:
  
   - 将博客源文件托管到Github.
   
- #### 实现方法：
+#### 实现方法：
  
   - 在Github上创建一个新的repository ,名字为` hexohexo `。（与你的本地博客源文件文件名相同即可）
   
@@ -58,47 +58,47 @@ categories:
  git pull origin master
  ```
 
- 现在在任何一台电脑上，只需要` git clone git@github.com:hanweizhe/hexoohexo.git ` 即可将Hexo源文件复制到本地。（请将` git clone git@github.com:hanweizhe/hexohexo.git` 换成自己远程仓库地址）
+现在在任何一台电脑上，只需要` git clone git@github.com:hanweizhe/hexoohexo.git ` 即可将Hexo源文件复制到本地。（请将` git clone git@github.com:hanweizhe/hexohexo.git` 换成自己远程仓库地址）
  
- 在本地编写完博客时，顺序执行以下命令，即可完成Hexo博客源文件的同步更新，保持Github上的Hexo源码为最新的版本。
+在本地编写完博客时，顺序执行以下命令，即可完成Hexo博客源文件的同步更新，保持Github上的Hexo源码为最新的版本。
  
  ``` bash
  git add .
  git commit -m "更新Hexo源文件"
  git push origin master
  ```
- 至此，Hexo源代码文件就完成了同步与更新。
+至此，Hexo源代码文件就完成了同步与更新。
  
-  对于博主这种懒人，每次更新博文都需要输入两三行重复的git命令真是一件麻烦事，说不定哪天就忘记push到Github上啦。有没有更省事的办法？？完成自动备份 ？？ ：happy：
+对于博主这种懒人，每次更新博文都需要输入两三行重复的git命令真是一件麻烦事，说不定哪天就忘记push到Github上啦。有没有更省事的办法？？完成自动备份 ？？ ：happy：
   
- ##### 原理
+#### 原理
  
- 利用`NodeJs`的事件监听机制实现监听Hexo的`deployAfter`事件，待博客部署完成之后自动运行Git备份命令，以达到自动备份的目的。
+利用`NodeJs`的事件监听机制实现监听Hexo的`deployAfter`事件，待博客部署完成之后自动运行Git备份命令，以达到自动备份的目的。
  
- #### 实现
+#### 实现
  
- ##### 将hexohexo目录加入Git仓库（见前面）。
+##### 将hexohexo目录加入Git仓库（见前面）。
  
- ##### 安装`shelljs`模块。
+##### 安装`shelljs`模块。
  
- 要实现这个自动备份功能，需要依赖NodeJs的一个`shelljs`模块，该模块重新包装啦`child_process`
+要实现这个自动备份功能，需要依赖NodeJs的一个`shelljs`模块，该模块重新包装啦`child_process`
  ,调用系统命令更加方便。该模块需要安装后使用。
  
  
- 键入以下命令，完成`shelljs`模块的安装：
+键入以下命令，完成`shelljs`模块的安装：
  
  ``` bash
  npm install --save shelljs
  ```
  
- ##### 编写自动备份脚本
+##### 编写自动备份脚本
  
  
- 待到模块安装完成，在`hexohexo`根目录的`scripts`文件夹下新建一个js文件，文件名字随意取。
+待到模块安装完成，在`hexohexo`根目录的`scripts`文件夹下新建一个js文件，文件名字随意取。
  
- **如果没有`scripts`目录，请新建一个。**
+**如果没有`scripts`目录，请新建一个。**
  
- 然后再脚本中，写入以下内容：
+然后再脚本中，写入以下内容：
  
  ``` js
  require('shelljs/global');
@@ -135,7 +135,7 @@ categories:
   - 其中，需要修改地`17`行的`D:/hexohexo`路径为Hexo的根目录路径。（脚本中的路径为博主的Hexo路径）；
   - 如果你的Git远程仓库名称不为`origin`的话（默认为`origin`），还需要修改第`28`行执行的push命令，修改成自己的远程仓库名与相应的分支名。
   
- 保存脚本并退出，然后执行`hexo deploy`命令，将会得到类似以下结果：
+保存脚本并退出，然后执行`hexo deploy`命令，将会得到类似以下结果：
  
  ``` bash
  INFO  Deploying: git>
@@ -162,6 +162,7 @@ To git@github.com:smilexiamo/hexo.git
    8f2b4b4..f044360  master -> master
 ==================Auto Backup Complete============================
 ```
+
 这样子，每次更新博客并`hexo deploy`到服务器上之后。备份就会自动启动并完成备份啦！~~~ 是不是很方便呀！
 
 Enjoy it!
