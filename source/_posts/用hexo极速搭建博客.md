@@ -1,9 +1,9 @@
 title: 用hexo极速搭建博客
 author: 夏茂盛
 tags:
-  - hexo
+  - 教程| Hexo教程 | Hexo快速搭建
 categories:
-  - 教程| hexo教程
+  - Hexo
 date: 2017-11-10 21:04:00
 ---
 hexo是一个非常轻量且快速的博客生成框架，可以使用markdown便捷的生成文章。
