@@ -112,29 +112,29 @@ date: 2017-11-11 12:49:00
     }
     function run() {
         if (!which('git')) {
-            echo('Sorry, this script requires   git');
+            echo('Sorry, this script requires git');
             exit(1);
         } else {
             echo("======================Auto   Backup Begin===========================");
             cd('D:/hexohexo');    //此处修改为   Hexo根目录路径
             if (exec('git add --all').code   !== 0) {
-                echo('Error: Git add       failed');
+                echo('Error: Git add failed');
                 exit(1);
             }
             if (exec('git commit -am "Form   auto backup script\'s commit"').code !== 0) {
-                echo('Error: Git commit     failed');
+                echo('Error: Git commit failed');
                 exit(1);
             }
             if (exec('git push origin       master').code !== 0) {
-                echo('Error: Git push        failed');
+                echo('Error: Git push failed');
                 exit(1);
             }
-            echo("==================Auto      Backup Complete============================")
+            echo("==================Auto Backup Complete============================")
         }
     }
 ```
-  - 其中，需要修改地`17`行的`D:/hexohexo`路径为Hexo的根目录路径。（脚本中的路径为博主的Hexo路径）；
-  - 如果你的Git远程仓库名称不为`origin`的话（默认为`origin`），还需要修改第`28`行执行的push命令，修改成自己的远程仓库名与相应的分支名。
+  - 其中，需要修改地`15`行的`D:/hexohexo`路径为Hexo的根目录路径。（脚本中的路径为博主的Hexo路径）；
+  - 如果你的Git远程仓库名称不为`origin`的话（默认为`origin`），还需要修改第`24`行执行的push命令，修改成自己的远程仓库名与相应的分支名。
   
 保存脚本并退出，然后执行`hexo deploy`命令，将会得到类似以下结果：
  
