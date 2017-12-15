@@ -44,3 +44,7 @@ hexo g -d
 **这是粗体**
 ***这是加粗斜体***
 ~~这是删除线~~
+
+
+<meta name="google-site-verification" content="{{ theme.google_site_verification }}" />
+<meta name="baidu-site-verification" content="{{ theme.baidu_site_verification }}" />
