@@ -35,3 +35,7 @@ open http://localhost:4000/admin/
 
 #### 总结
 2017年已经接近尾端，一个晴朗的白天，放下作业，整理一下自己的思绪，写写总结。无意中间发现这么一款管理博客的神器，也是蛮开心的！以后自己写东西也会方便很多！
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86   
+    src="http://music.163.com/outchain/player?type=2&id=25706282&auto=0&height=66">  
+</iframe>  
