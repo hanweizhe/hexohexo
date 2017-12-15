@@ -46,7 +46,7 @@ date: 2017-11-11 12:49:00
   
   ``` bash
   git add .
-  git commit -m "添加Hexo源码文件作为备份"
+  git commit -m "添加Hexo源码文件作为备份"
   ```
   - 将本地仓库文件推送到Github，执行以下命令：
   
