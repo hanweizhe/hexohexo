@@ -108,24 +108,24 @@ date: 2017-11-11 12:49:00
             run();
         });
     } catch (e) {
-        console.log("产生了一个错误<(￣3￣)>     !，错误详情为：" + e.toString());
+        console.log("产生了一个错误<(￣3￣)> !，错误详情为：" + e.toString());
     }
     function run() {
         if (!which('git')) {
             echo('Sorry, this script requires git');
             exit(1);
         } else {
-            echo("======================Auto   Backup Begin===========================");
+            echo("======================Auto Backup Begin===========================");
             cd('D:/hexohexo');    //此处修改为   Hexo根目录路径
-            if (exec('git add --all').code   !== 0) {
+            if (exec('git add --all').code !== 0) {
                 echo('Error: Git add failed');
                 exit(1);
             }
-            if (exec('git commit -am "Form   auto backup script\'s commit"').code !== 0) {
+            if (exec('git commit -am "Form auto backup script\'s commit"').code !== 0) {
                 echo('Error: Git commit failed');
                 exit(1);
             }
-            if (exec('git push origin       master').code !== 0) {
+            if (exec('git push origin master').code !== 0) {
                 echo('Error: Git push failed');
                 exit(1);
             }
@@ -139,7 +139,7 @@ date: 2017-11-11 12:49:00
 保存脚本并退出，然后执行`hexo deploy`命令，将会得到类似以下结果：
  
  ``` bash
- INFO  Deploying: git>
+INFO  Deploying: git>
 INFO  Clearing .deploy folder...
 INFO  Copying files from public folder...
 [master 3020788] Site updated: 2015-07-06 15:08:06
