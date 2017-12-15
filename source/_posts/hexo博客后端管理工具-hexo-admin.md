@@ -1,14 +1,14 @@
-title: hexo博客后端管里工具---hexo-admin
+title: hexo博客后端管理工具---hexo-admin
 author: 夏茂盛
 tags:
-  - 教程| Hexo教程 | Hexo博客后端管里工具
+  - 教程| Hexo教程 | Hexo博客后端管理工具
 categories:
   - Hexo
 date: 2017-12-15 11:15:00
 ---
 #### 前言
 
-最近又重新折腾和整理啦一下自己的博客，发现每次写博客都会进入`修改->启动hexo server->修改`的回圈，进入一个非常麻烦的过程，有没有好的解决方案呢？？？困惑？肯定有呀！！也就是我接下来要介绍的[hexo-admin](https://jaredforsyth.com/hexo-admin/)
+最近又重新折腾和整理啦一下自己的博客，发现每次写博客都会进入`修改->启动hexo server->修改`的回圈，这是一个非常麻烦的过程，有没有好的解决方案呢？？？困惑？肯定有呀！！也就是我接下来要介绍的[hexo-admin](https://jaredforsyth.com/hexo-admin/)
 
 ![“hexo-admin”](/image/hexo.jpg) 
 
