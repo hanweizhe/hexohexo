@@ -1,10 +1,10 @@
 title: Hexo博客源文件备份
-date: 2017-11-11 12:49:00
 author: 夏茂盛
 tags:
   - 教程| Hexo教程 | Hexo源文件备份
 categories:
   - Hexo
+date: 2017-11-11 12:49:00
 ---
 #### 前言
 
@@ -13,7 +13,7 @@ categories:
 #### 备份方案
 
 想到的办法：
-
+  
   - 将博客源文件拷贝到U盘里---但是这样做，无法同步。
   
   - 使用网盘的话，据说.git文件不能上传同步---而且我对国内的网盘也不放心。
@@ -35,7 +35,7 @@ categories:
   - 设置远程仓库地址，并更新，本地文件夹与远程仓库绑定：
   
   ``` bash
-  git remote add origin git@github.com:hanweizhe/hexohexo.git
+ git remote add origin git@github.com:hanweizhe/hexohexo.git
   git pull orgin master
   ```
   
@@ -69,7 +69,7 @@ categories:
  ```
 至此，Hexo源代码文件就完成了同步与更新。
  
-对于博主这种懒人，每次更新博文都需要输入两三行重复的git命令真是一件麻烦事，说不定哪天就忘记push到Github上啦。有没有更省事的办法？？完成自动备份 ？？ ：happy：
+对于博主这种懒人，每次更新博文都需要输入两三行重复的git命令真是一件麻烦事，说不定哪天就忘记push到Github上啦。有没有更省事的办法？？完成自动备份 ？？
   
 #### 原理
  
@@ -166,4 +166,3 @@ To git@github.com:smilexiamo/hexo.git
 这样子，每次更新博客并`hexo deploy`到服务器上之后。备份就会自动启动并完成备份啦！~~~ 是不是很方便呀！
 
 Enjoy it!
- 
