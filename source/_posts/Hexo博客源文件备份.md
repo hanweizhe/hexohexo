@@ -35,8 +35,9 @@ date: 2017-11-11 12:49:00
   - 设置远程仓库地址，并更新，本地文件夹与远程仓库绑定：
   
   ``` bash
- git remote add origin git@github.com:hanweizhe/hexohexo.git
+  git remote add origin git@github.com:hanweizhe/hexohexo.git
   git pull orgin master
+  
   ```
   
   - (**非必须项**) 修改`.gitignore`文件（如果没有就手动创建一个），在里面加入`.*.log`和`public/`以及`.deploy*/`。因为每次执行`hexo generate`命令时，上述目录都会被重写更新，因此忽略上述目录下的文件更新，加快push速度。
