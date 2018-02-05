@@ -61,7 +61,6 @@ cd  /home/centos/redis/anzhuang/bin/
 ./redis-cli [-h localhost -p 6379 ] 客户端连接
 ~~~  
 默认redis端口号为6379，启动方式为前台启动，就是服务端启动打开一个界面，不能关闭，重新开一个客户端界面进行连接。
-
 10. 让redis以后台进程的形式运行
 
  编辑conf配置文件,修改如下内容：
