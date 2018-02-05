@@ -9,6 +9,10 @@ hexo generate
 hexo deploy
 试一试
 
+git add -all
+git commit -m 'add blog'
+git push -u origin master
+
 could not resolve host:github.com 
 解决办法：
 ping github.com
