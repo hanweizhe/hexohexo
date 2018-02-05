@@ -54,12 +54,12 @@ redis-server 服务端
 ~~~
 cp /path/redis.conf /home/centos/redis/anzhuang
 ~~~
-9. 服务端启动与客户端连接(默认redis端口号为6379，启动方式为前台启动，就是服务端启动打开一个界面，不能关闭，重新开一个客户端界面进行连接)
-~~~ bash
+9. 服务端启动与客户端连接(默认redis端口号为6379，启动方式为前台启动，就是服务端启动打开一个界面，不能关闭，重新开一个客户端界面进行连接)  
+~~~
 cd  /home/centos/redis/anzhuang/bin/
 ./redis-server redis.conf  服务端启动
 ./redis-cli [-h localhost -p 6379 ] 客户端连接
-~~~  
+~~~
 10. 让redis以后台进程的形式运行  
 
  编辑conf配置文件,修改如下内容：
