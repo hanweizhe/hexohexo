@@ -9,7 +9,7 @@ hexo generate
 hexo deploy
 йтр╩йт
 
-git add -all
+git add --all
 git commit -m 'add blog'
 git push -u origin master
 
