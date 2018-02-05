@@ -6,7 +6,7 @@ categories:
   - redis
 date: 2018-02-05 10:45:54
 ---
-### 前言
+#### 前言
 2017年已经接近尾声，最近自己在慧与实习(原惠普)也没啥事，闲暇之余，想起自己已经好久没有写博客，决定把redis的博客稍微写一写，相当于做一份笔记，以后方便查阅。
 
 #### redis是啥呢
@@ -22,7 +22,6 @@ redis是开源(BSD许可),内存数据结构存储.可以当作数据库，缓�
 redis和memcached相比,独特之处:
 
 1. redis可以用来做存储(storge)和缓存(cache), 而memcached只可以用来做缓存(cache)。这个特点主要因为其有”持久化”的功能.
-
 **持久化简单一句话就是内存里面数据可以同步到光盘或硬盘等长久可以存储的设备上面。**
   
 2. 存储的数据有”结构”,对于memcached来说,存储的数据,只有1种类型--”字符串”,而redis则可以存储字符串,链表,哈希结构,集合,有序集合.
@@ -60,8 +59,9 @@ cp /path/redis.conf /home/centos/redis/anzhuang
 cd  /home/centos/redis/anzhuang/bin/
 ./redis-server redis.conf  服务端启动
 ./redis-cli [-h localhost -p 6379 ] 客户端连接
-~~~
+~~~  
 默认redis端口号为6379，启动方式为前台启动，就是服务端启动打开一个界面，不能关闭，重新开一个客户端界面进行连接。
+
 10. 让redis以后台进程的形式运行
 
  编辑conf配置文件,修改如下内容：
@@ -85,7 +85,7 @@ redis-cli shutdown  关闭redis服务
 date -s ‘yyyy-mm-dd hh:mm:ss’ 重写系统时间
 clock -w  把当前系统时间写入CMOS中
 ~~~
-##### 了解系统时间与CMOS时间关系
+#### 了解系统时间与CMOS时间关系
 ~~~
 系统时间由linux操作系统来维护，CMOS时间是CMOS芯片保存的时间。系统启动时，操作系统将从CMOS读出时间记录为系统时间，同时操作系统每隔一段时间自动将系统时间写入CMOS中，如果使用date命令修改完系统时间后立即重启电脑，操作系统还没有将系统时间写入CMOS中，这样开机后就还是修改前的时间，为了保险起见，建议手动使用命令clock将系统时间写入CMOS中。
 ~~~
