@@ -9,6 +9,11 @@ hexo generate
 hexo deploy
 试一试
 
+could not resolve host:github.com 
+解决办法：
+ping github.com
+C:\Windows\System32\drivers\etc\hosts添加 ip guthub.com
+
 多人协作之如何建立本地分支？
 git branch查看当前的分支情况
 git branch mybranch（分支名）建立一个自己的分支
