@@ -92,8 +92,8 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  #repo: https://github.com/hanweizhe/hanweizhe.github.io.git
+  repo: https://github.com/hanweizhe/hanweizhe.github.io.git
   #repository: git@github.com:hanweizhe/hanweizhe.github.io.git
   #repository: ssh://git@github.com:hanweizhe/hanweizhe.github.io.git
-  repo: git@github.com:hanweizhe/hanweizhe.github.io.git
+  #repo: git@github.com:hanweizhe/hanweizhe.github.io.git
   branch: master

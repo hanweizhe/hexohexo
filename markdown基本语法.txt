@@ -4,6 +4,10 @@ hexo server -d
 http://localhost:4000/admin/
 
 hexo g -d
+报错的话
+hexo generate
+hexo deploy
+试一试
 
 多人协作之如何建立本地分支？
 git branch查看当前的分支情况
