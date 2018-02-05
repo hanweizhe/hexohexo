@@ -1,8 +1,19 @@
 hexo new page
 
 hexo server -d
+http://localhost:4000/admin/
 
 hexo g -d
+
+多人协作之如何建立本地分支？
+git branch查看当前的分支情况
+git branch mybranch（分支名）建立一个自己的分支
+git checkout mybranch切换到新建的分支
+git commit -m "i had do some thing in mybranch"在mybranch下进行commit
+git checkout master我们回到原来的master分支
+git merge mybranch将之前在branch上的修改合并到master
+git branch -d mybranch此时mybranch分支对我们来说已经没用了，删除
+git push我们可以一次性将本地master的修改(merge后的)push到远程
 
 
 超链接：
@@ -46,5 +57,3 @@ hexo g -d
 ~~这是删除线~~
 
 
-<meta name="google-site-verification" content="{{ theme.google_site_verification }}" />
-<meta name="baidu-site-verification" content="{{ theme.baidu_site_verification }}" />
