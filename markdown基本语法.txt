@@ -1,4 +1,5 @@
-hexo new page
+hexo new page ""  //新建页面
+hexo new ""  // 新建文章
 
 hexo server -d
 http://localhost:4000/admin/
