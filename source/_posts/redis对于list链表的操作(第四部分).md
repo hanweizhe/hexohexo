@@ -62,6 +62,7 @@ rpoplpush source dest
 1. Rpoplpush task bak；
 2. 接收返回值,并做业务处理；
 3. 如果成功,rpop bak 清除任务。 如不成功,下次从bak表里取任务。
+
 ~~~
 brpop | blpop  key timeout
 ~~~
