@@ -28,6 +28,7 @@ lrem key count value
 **注**: 删除绝对值count个值为value后结束  
 Count>0 从表头删除  
 Count<0 从表尾删除
+
 ~~~
 ltrim key start stop
 ~~~
