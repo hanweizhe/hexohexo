@@ -18,8 +18,8 @@ redis 127.0.0.1:6379> zadd stu 18 lily 19 hmm 20 lilei 21 lilei
 ~~~
 zrange key start stop [WITHSCORES]
 ~~~
-把集合排序后,返回名次[start,stop]的元素
-默认是升续排列。  
+把集合排序后,返回名次[start,stop]的元素。
+默认是升续排列。  
 withscores 是把score也打印出来。
 ~~~
 zcard key
@@ -67,8 +67,7 @@ zrevrange key start stop
 ~~~
 zrangebyscore  key min max [withscores] limit offset N
 ~~~
-作用: 集合(升续)排序后,取score在[min,max]内的元素,
-并跳过 offset个, 取出N个。
+作用: 集合(升续)排序后,取score在[min,max]内的元素,并跳过 offset个, 取出N个。
 ~~~
 redis 127.0.0.1:6379> zadd stu 1 a 3 b 4 c 9 e 12 f 15 g
 (integer) 6
