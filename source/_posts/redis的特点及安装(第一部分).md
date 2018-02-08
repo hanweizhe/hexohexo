@@ -47,6 +47,7 @@ $ make  PREFIX=/home/centos/redis/anzhuang install 注: PREFIX要大写
 redis-benchmark  性能测试工具
 redis-check-aof  日志文件检测工具(比如断电造成日志损坏,可以检测并修复)
 redis-check-dump  快照文件检测工具,效果类上
+redis-sentinel  哨兵，进行主从切换
 redis-cli  客户端
 redis-server 服务端
 ~~~
