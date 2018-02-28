@@ -24,7 +24,8 @@ redis sentinel是一个分布式架构，包含若干个sentinel节点和redis�
 port 26379 # 端口  
 sentinel monitor mymaster 127.0.0.1 6379 2 #mymaster是master的别名，127.0.0.1 6379是当前sentinel节点监控的master，2代表判断master宕机至少需要2个sentinel节点同意。  
 sentinel down-after-milliseconds mymaster 30000  #多少毫秒后连接不到master认为宕机。  
-sentinel parallel-syncs mymaster 1  #一次性修改几个slave指向新的master，每次向新的master发起复制操作的slave个数。  
+sentinel can-failover mymaster yes  #是否允许sentinel修改此slave为master. 如为no,则只能监控,无权修改.一般只允许一个sentinel进行修改。  
+sentinel parallel-syncs mymaster 1  #一次性修改几个slave指向新的master，每次向新的master发起复制操作的slave个数。  
 我的部署:
 
 |role|IP|port|
