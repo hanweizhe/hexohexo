@@ -1,7 +1,7 @@
-title: redis配置文件详解(第十五部分)
+title: redis配置文件详解和命令(第十五部分)
 author: 夏茂盛
 tags:
-  - 教程| redis教程 | redis配置文件详解
+  - 教程| redis教程 | redis配置文件详解和命令
 categories:
   - redis
 date: 2018-02-28 14:46:55
@@ -35,8 +35,9 @@ date: 2018-02-28 14:46:55
 ##### 安全
 |参数|作用|
 |:----|:----|
-|requirepass 密码|设置密码|
-|rename-command CONFIG b840fc02d524045429941cc15f59e41cb7be6c52 |如果公共环境,可以重命名部分敏感命令 如config|
+|requirepass 密码|设置认证密码|
+|rename-command <normal-cmd> <new-cmd> |如果公共环境,可以重命名部分敏感命令 如config|
+|rename-command CONFIG "" |完全禁用CONFIG命令|
 ##### 限制
 |参数|作用|
 |:----|:----|
@@ -68,7 +69,7 @@ date: 2018-02-28 14:46:55
 |slowlog-log-slower-than 10000|记录响应时间大于10000微秒的慢查询|
 |slowlog-max-len 128|最多记录128条|
 #### 服务端命令
-|参数|作用|
+|命令|作用|
 |:----|:----|
 |time | 返回时间戳+微秒|
 |dbsize| 返回key的数量|
@@ -98,19 +99,10 @@ date: 2018-02-28 14:46:55
 |client getname |获取连接的名称 默认nil|
 |client setname "名称"|设置连接名称,便于调试|
 #### 连接命令
-|参数|作用|
+|命令|作用|
 |:----|:----|
 |auth 密码|密码登陆(如果有密码)|
 |ping|测试服务器是否可用|
 |echo "some content" |测试服务器是否正常交互|
 |select 0/1/2...|选择数据库|
 |quit |退出连接|
-
-
-
-
-
-
-
-
-
