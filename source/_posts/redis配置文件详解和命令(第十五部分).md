@@ -92,7 +92,6 @@ date: 2018-02-28 14:46:55
 |config restart |更新info命令的信息|
 |debug object key|调试选项,看一个key的情况|
 |debug segfault |模拟段错误,让服务器崩溃|
-|object key (refcount|encoding|idletime)||
 |monitor |打开控制台,观察命令(调试用)|
 |client list|列出所有连接|
 |client kill |杀死某个连接  CLIENT KILL 127.0.0.1:43501|
